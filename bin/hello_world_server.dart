@@ -1,19 +1,22 @@
-// Copyright (c) 2014, the Dart project authors.  Please see the AUTHORS file
-// for details. All rights reserved. Use of this source code is governed by a
-// BSD-style license that can be found in the LICENSE file.
-
-// Replies "Hello, world!" to all requests.
-// Use the URL localhost:4040 in your browser.
 
 import 'dart:io';
 
 main() async {
-  var requestServer =
-      await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 4040);
-  print('listening on localhost, port ${requestServer.port}');
+  	var requestServer =
+    await HttpServer.bind(InternetAddress.LOOPBACK_IP_V4, 4000 );
+  	print('Rodando na porta, port ${requestServer.port}');
 
-  await for (HttpRequest request in requestServer) {
-    request.response..write('Hello, world!')
-                    ..close();
-  }
+  	await for (HttpRequest request in requestServer) {
+  		
+  		if (request.uri.path == '/personagens') {
+  			var contents = await new File('personagens.txt').readAsString();
+	  		request.response..write(contents)..close();
+  		}
+  		if (request.uri.path == '/naves') {
+  			var contents = await new File('naves.txt').readAsString();
+	  		request.response..write(contents)..close();
+  		}else{
+  			request.response..write("APIs disponíveis /personagens e /naves")..close();
+  		}
+	}
 }
