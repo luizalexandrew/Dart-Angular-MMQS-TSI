@@ -1,0 +1,29 @@
+<div ng-controller="HomeCtrl">
+	<md-toolbar>
+		<div class="md-toolbar-tools">
+			<md-button ng-click="toggleLeft()" class="md-button" hide-gt-md="" aria-label="Menu">
+				<md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+			</md-button>
+			<h2>
+				<span>{{name}}</span>
+			</h2>					    
+		</div>
+	</md-toolbar>
+	<div class="spaceToolbar"></div>
+	<md-content class="md-padding">
+    	<md-card>      
+     		<md-card-content>
+				<h3>Star Wars Info</h3>
+				<p>Star Wars (no Brasil, Guerra nas Estrelas e em Portugal, Guerra das Estrelas) é o título de uma franquia de ópera espacial estadunidense criada pelo cineasta George Lucas. A franquia conta com uma série de sete filmes de fantasia científica e um spin-off. O primeiro filme da série foi lançado apenas com o título Star Wars[1] em 25 de maio de 1977, e se tornou um sucesso inesperado e fenômeno mundial de cultura popular. Star Wars foi responsável pelo inicio da "era dos blockbusters": Super produções cinematográficas que fazem sucesso nas bilheterias e viram franquias com brinquedos, jogos, livros etc. Foi seguido por duas sequências, O Império Contra-Ataca e O Retorno do Jedi, lançadas em intervalos de três anos. Esta primeira trilogia seguia o trio hoje icônico: Luke Skywalker, Princesa Leia e Han Solo. O trio lutava na Aliança Rebelde para derrubar o tirano Império Galáctico; paralelamente ocorre a jornada de Luke para se tornar um cavaleiro Jedi e derrotar tanto Darth Vader, um ex-jedi que sucumbiu ao Lado Sombrio da Força e o Imperador.</p>
+				<p>Depois de 16 anos sem filmes novos no cinema, uma nova trilogia conhecida como trilogia de prequela começou em 1999 com Star Wars Episódio I: A Ameaça Fantasma. Esta trilogia volta no tempo para contar como Anakin Skywalker se transformou em Darth Vader e acompanha a queda da Ordem Jedi e da República Galáctica que é substituída pelo Império. Mais uma vez foi lançada em intervalos de três anos, com o último filme sendo lançado em 2005. As reações à trilogia original foram extremamente positivas, enquanto a trilogia de prequela recebeu reações mistas tanto do público geral quanto de críticos especializados. Mesmo assim, todos os seis filmes foram bem sucedidos nas bilheterias e receberam indicações ou ganharam prêmios no Óscar.</p>
+
+				<a ng-href="#/personagens">
+					<md-button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Personagens"><span class="ng-scope">Personagens</span><div class="md-ripple-container"></div></md-button>
+				</a>
+				<a ng-href="#/naves">
+					<md-button class="md-raised md-primary md-button md-ink-ripple" type="button" ng-transclude="" aria-label="Naves"><span class="ng-scope">Naves</span><div class="md-ripple-container"></div></md-button>
+				</a>
+			</md-card-content>
+		</md-card>
+	</md-content>	
+</div>
